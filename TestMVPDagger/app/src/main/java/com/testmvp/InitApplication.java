@@ -7,6 +7,7 @@ import com.testmvp.di.components.AppComponents;
 import com.testmvp.di.components.DaggerAppComponents;
 import com.testmvp.di.modules.ContextModule;
 import com.testmvp.di.modules.ModelModule;
+import com.testmvp.di.modules.SharedPreferenceModule;
 
 public class InitApplication extends Application {
     private AppComponents appComponents;
@@ -18,6 +19,7 @@ public class InitApplication extends Application {
                 .builder()
                 .modelModule(new ModelModule())
                 .contextModule(new ContextModule(this))
+                .sharedPreferenceModule(new SharedPreferenceModule())
                 .build();
     }
 

@@ -2,6 +2,7 @@ package com.testmvp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -18,6 +19,7 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity implements Contract.ViewCallBacks {
 
+    private static final String TAG = "MainActivity789";
     @BindView(R.id.text_view)
     TextView mTextView;
 
@@ -26,6 +28,9 @@ public class MainActivity extends AppCompatActivity implements Contract.ViewCall
 
     @Inject
     Contract.PresenterCallBacks mPresenter;
+
+    @Inject
+    MySharedPreferences mMySharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,11 +63,18 @@ public class MainActivity extends AppCompatActivity implements Contract.ViewCall
     @OnClick(R.id.click)
     void handleClick() {
         mPresenter.onButtonClick();
+        checkPref();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         mPresenter.onDestroy();
+    }
+
+    private void checkPref() {
+        mMySharedPreferences.putData("test", 100);
+        int i = mMySharedPreferences.getData("test");
+        Log.d(TAG, "value in pref-->" + i);
     }
 }
