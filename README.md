@@ -7,3 +7,5 @@ TestDaggerTwo --> showing use of dagger
 TestBindingAndViewModel --> showing data binding with view model 
 <BR>
 TestMVP --> showing basic example of MVP pattern
+<BR>
+TestMVPDagger --> MVP and dagger2
