@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Weather Info</string>
+    <string name="hint_enter_city_name">Enter City Name</string>
+    <string name="btn_label_submit">Find Weather Info</string>
+    <string name="btn_label_current_loc_weather">Weather Info Current Location</string>
+    <string name="label_text_view">Please enter city names</string>
+    <string name="city_name">Choose City name</string>
+    <string name="label_date">Date</string>
+    <string name="label_title">Title</string>
+    <string name="label_desc">Description</string>
+    <string name="label_temp">Temperature</string>
+    <string name="label_place">Place</string>
+</resources>
