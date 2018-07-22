@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_container"
+    android:layout_width="76dp"
+    android:layout_height="76dp"
+    android:gravity="center"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:layout_width="75dp"
+        android:layout_height="75dp">
+
+        <ImageView
+            android:id="@+id/idProductImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:src="@drawable/shoes" />
+
+        <TextView
+            android:id="@+id/idProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="RED" />
+    </LinearLayout>
+</LinearLayout>

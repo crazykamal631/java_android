@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardElevation="@dimen/margin10"
+        card_view:cardMaxElevation="@dimen/margin10"
+        card_view:contentPadding="@dimen/margin10">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:padding="5dp">
+            <!--
+            grid items for RecyclerView
+            -->
+            <ImageView
+                android:id="@+id/like_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/heart_icon_grey" />
+
+            <LinearLayout
+                android:id="@+id/image_container"
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/shoes" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_container"
+                android:text="ABCD"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/product_current_price"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@+id/product_name"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:text="100$"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/product_actual_price"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@+id/product_name"
+                android:layout_marginEnd="5dp"
+                android:layout_toEndOf="@+id/product_current_price"
+                android:gravity="center"
+                android:text="200$"
+                android:textColor="#808080"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/product_discout_info"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@+id/product_name"
+                android:layout_toEndOf="@+id/product_actual_price"
+                android:gravity="center"
+                android:text="50% off"
+                android:textColor="#808080" />
+
+            <TextView
+                android:id="@+id/product_emi_info"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/product_current_price"
+                android:gravity="center"
+                android:text="No Cost EMI"
+                android:textColor="#00ae0e"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

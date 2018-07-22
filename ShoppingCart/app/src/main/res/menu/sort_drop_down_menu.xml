@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/sort_most_viewed"
+        app:showAsAction="ifRoom"
+        android:title="@string/label_most_viewed"
+        android:visible="true" />
+    <item
+        android:id="@+id/sort_most_ordered"
+        app:showAsAction="ifRoom|withText"
+        android:title="@string/label_most_ordered"
+        android:visible="true" />
+    <item
+        android:id="@+id/sort_most_shared"
+        app:showAsAction="ifRoom"
+        android:title="@string/label_most_shared"
+        android:visible="true" />
+</menu>
