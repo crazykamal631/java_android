@@ -12,7 +12,7 @@ import web.com.shoppingcart.di.module.AppContextModule;
 import web.com.shoppingcart.di.module.RetrofitModule;
 import web.com.shoppingcart.di.module.RoomModule;
 import web.com.shoppingcart.di.scopes.ApplicationScope;
-import web.com.shoppingcart.server.api.APIInterfaceWeatherService;
+import web.com.shoppingcart.server.api.APIInterfaceService;
 
 @ApplicationScope
 @Component(modules = {
@@ -25,7 +25,7 @@ public interface AppComponent extends AndroidInjector<DaggerApplication> {
 
     void inject(InitApplication initApplication);
 
-    APIInterfaceWeatherService provideServerApi();
+    APIInterfaceService provideServerApi();
 
     @Component.Builder
     interface Builder {

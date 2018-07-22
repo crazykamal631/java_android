@@ -25,7 +25,7 @@ import web.com.shoppingcart.db.Variant;
 import web.com.shoppingcart.db.VariantDao;
 import web.com.shoppingcart.di.components.AppComponent;
 import web.com.shoppingcart.di.components.DaggerAppComponent;
-import web.com.shoppingcart.server.api.APIInterfaceWeatherService;
+import web.com.shoppingcart.server.api.APIInterfaceService;
 import web.com.shoppingcart.server.pojo.ProductCategory;
 import web.com.shoppingcart.server.pojo.ProductVariant;
 import web.com.shoppingcart.server.pojo.Product_;
@@ -37,7 +37,7 @@ public class InitApplication extends DaggerApplication {
     private static final String TAG = "InitApplication_Cart741";
 
     @Inject
-    APIInterfaceWeatherService apiInterfaceWeatherService;
+    APIInterfaceService apiInterfaceWeatherService;
 
     @Inject
     CategoryDao categoryDao;
@@ -78,7 +78,7 @@ public class InitApplication extends DaggerApplication {
     }
 
     private void fetchData() {
-        Call<Response> call = apiInterfaceWeatherService.doGetWeatherInfoFiveDays();
+        Call<Response> call = apiInterfaceWeatherService.getDataFromServer();
         call.enqueue(new Callback<Response>() {
             @Override
             public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {

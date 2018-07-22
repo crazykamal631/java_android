@@ -8,15 +8,15 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import web.com.shoppingcart.di.scopes.ApplicationScope;
-import web.com.shoppingcart.server.api.APIInterfaceWeatherService;
+import web.com.shoppingcart.server.api.APIInterfaceService;
 
 @Module
 public class RetrofitModule {
 
     @Provides
     @ApplicationScope
-    APIInterfaceWeatherService getApiService(Retrofit retrofit) {
-        return retrofit.create(APIInterfaceWeatherService.class);
+    APIInterfaceService getApiService(Retrofit retrofit) {
+        return retrofit.create(APIInterfaceService.class);
     }
 
     @Provides

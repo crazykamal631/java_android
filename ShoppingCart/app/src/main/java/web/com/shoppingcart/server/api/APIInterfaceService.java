@@ -5,8 +5,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import web.com.shoppingcart.server.pojo.Response;
 
-public interface APIInterfaceWeatherService {
+public interface APIInterfaceService {
     @GET("json")
-    //Observable<Response> doGetWeatherInfoFiveDays();
-    Call<Response> doGetWeatherInfoFiveDays();
+    Call<Response> getDataFromServer();
 }
