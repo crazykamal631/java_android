@@ -35,8 +35,4 @@ public interface AppComponent extends AndroidInjector<DaggerApplication> {
 
         AppComponent build();
     }
-
-    /*Context provideAppContext();
-    void inject(InitApplication initApplication);
-    CategoryDao providesCategoryDao();*/
 }
